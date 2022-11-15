@@ -1,6 +1,6 @@
 module GeomAnaPhyHelper
 
-export tautology,contradiction,id
+export tautology, contradiction, id
 
 include("LogicOp.jl")
 end

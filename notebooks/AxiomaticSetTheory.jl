@@ -1,8 +1,14 @@
 ### A Pluto.jl notebook ###
-# v0.19.12
+# v0.19.14
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ c94d286f-ea7b-4b08-b495-fdd1e8eff984
+using Pkg; Pkg.activate()
+
+# ╔═╡ d97fc2af-9739-4eae-90e4-df33f92aa09e
+using GeomAnaPhyHelper
 
 # ╔═╡ 937a517d-3760-4d9c-8650-359209c1f452
 md"""
@@ -18,10 +24,6 @@ the number of propositions they operate upon.
 
 """
 
-# ╔═╡ d97fc2af-9739-4eae-90e4-df33f92aa09e
-using Pkg; Pkg.activate("..")
-using GeomAnaPhyHelper
-
 # ╔═╡ a685a72c-648e-11ed-0966-b59e6aab2ae1
 md""" Unary Operators (4)"""
 
@@ -30,29 +32,13 @@ md""" Unary Operators (4)"""
 begin
     propositions = [true, false]
     unary_operators = [!, id, tautology, contradiction]
-    prop_table = []
+    prop_table = [ [op(propositions[1]), op(propositions[2])] for op in unary_operators]
+	print(prop_table)
 end
-
-# ╔═╡ 00000000-0000-0000-0000-000000000001
-PLUTO_PROJECT_TOML_CONTENTS = """
-[deps]
-"""
-
-# ╔═╡ 00000000-0000-0000-0000-000000000002
-PLUTO_MANIFEST_TOML_CONTENTS = """
-# This file is machine-generated - editing it directly is not advised
-
-julia_version = "1.8.2"
-manifest_format = "2.0"
-project_hash = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
-
-[deps]
-"""
 
 # ╔═╡ Cell order:
 # ╠═937a517d-3760-4d9c-8650-359209c1f452
+# ╠═c94d286f-ea7b-4b08-b495-fdd1e8eff984
 # ╠═d97fc2af-9739-4eae-90e4-df33f92aa09e
 # ╠═a685a72c-648e-11ed-0966-b59e6aab2ae1
 # ╠═fccf159e-1e48-49e5-a8a3-7c2c17261f37
-# ╟─00000000-0000-0000-0000-000000000001
-# ╟─00000000-0000-0000-0000-000000000002
